@@ -1,3 +1,5 @@
 FROM ubuntu:latest
 
-CMD tail -f /var/log/cron.log
+RUN mkdir /var/log/yu
+
+CMD tail -f /var/log/yu/cron.log
