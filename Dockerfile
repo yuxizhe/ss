@@ -1,3 +1,4 @@
-FROM ubuntu:latest
-
-CMD ["tail", "-f" , "/var/log/cron.log"]
+FROM ubuntu:16.04
+RUN apt-get update
+RUN touch cron.log
+CMD ["tail", "-f" , "cron.log"]
