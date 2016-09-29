@@ -1,5 +1,4 @@
 FROM ubuntu:14.04.3
-MAINTAINER lowid <lowid@outlook.com>
 RUN apt-get update && \
     apt-get install -y python-pip libnet1 libnet1-dev libpcap0.8 libpcap0.8-dev git
 
@@ -18,4 +17,3 @@ EXPOSE 443
 
 # Configure container to run as an executable
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-CMD ssserver -p 443 -k yu1234128 -m aes-256-cfb
