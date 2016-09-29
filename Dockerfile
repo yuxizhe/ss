@@ -14,6 +14,8 @@ COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/net_speeder
 
+EXPOSE 443
+
 # Configure container to run as an executable
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ssserver -p 443 -k yu1234128 -m aes-256-cfb
