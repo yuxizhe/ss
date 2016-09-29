@@ -3,4 +3,4 @@ RUN apt-get update
 RUN apt-get install  -y python-pip
 RUN pip install shadowsocks
 COPY shadowsocks.json /etc/
-CMD ssserver -c shadowsocks.json -d start
+CMD ssserver -c /etc/shadowsocks.json -d start
