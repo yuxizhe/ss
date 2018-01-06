@@ -3,3 +3,5 @@ RUN apt-get update
 RUN apt-get install  -y python-pip
 RUN pip install shadowsocks
 COPY shadowsocks.json /etc/
+RUN touch cron.log
+CMD ["tail", "-f" , "cron.log"] 
